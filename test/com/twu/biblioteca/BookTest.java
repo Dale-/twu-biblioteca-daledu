@@ -26,8 +26,8 @@ public class BookTest {
     }
 
     public void testBookLibrary() throws Exception {
-        assertEquals(6, BookLibrary.size);
-        assertEquals("Martin Fowler", BookLibrary(0).getAuthor());
+        assertEquals(6, Book.BookLibrary().length);
+        assertEquals("Martin Fowler", Book.BookLibrary()[0].getAuthor());
     }
 
 }
