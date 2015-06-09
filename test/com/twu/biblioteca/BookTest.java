@@ -30,4 +30,12 @@ public class BookTest {
         assertEquals("Martin Fowler", Book.BookLibrary()[0].getAuthor());
     }
 
+    public void testListBook() throws Exception {
+        String bookLibraryInfo = "";
+        for(int i = 0; i < Book.BookLibrary().length; i++) {
+            bookLibraryInfo += Book.BookLibrary()[i].getBookInfo();
+        }
+        assertEquals(bookLibraryInfo,Book.listBook());
+    }
+
 }
