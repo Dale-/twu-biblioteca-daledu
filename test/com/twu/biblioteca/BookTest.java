@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BookTest {
+
     private Book book;
 
     @Before
@@ -23,4 +24,10 @@ public class BookTest {
     public void testGetBookInfo() throws Exception {
         assertEquals("BookName: " + book.getName() + " Author: " + book.getAuthor() + " PublishedYear: " + book.getPublishedyear(),book.getBookInfo());
     }
+
+    public void testBookLibrary() throws Exception {
+        assertEquals(6, BookLibrary.size);
+        assertEquals("Martin Fowler", BookLibrary(0).getAuthor());
+    }
+
 }
