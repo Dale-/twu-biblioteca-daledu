@@ -15,9 +15,9 @@ public class BookTest {
 
     @Test
     public void testBook() throws Exception {
-        assertEquals("Refactoring: Improving the Design of Existing Code", book.name);
-        assertEquals("Martin Fowler", book.author);
-        assertEquals("July 8, 1999", book.publishedyear);
+        assertEquals("Refactoring: Improving the Design of Existing Code", book.getName());
+        assertEquals("Martin Fowler", book.getAuthor());
+        assertEquals("July 8, 1999", book.getPublishedyear());
     }
 
 }
