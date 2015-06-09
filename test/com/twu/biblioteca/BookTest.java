@@ -20,4 +20,7 @@ public class BookTest {
         assertEquals("July 8, 1999", book.getPublishedyear());
     }
 
+    public void testGetBookInfo() throws Exception {
+        assertEquals("BookName: " + book.getName() + " Author: " + book.getAuthor() + " PublishedYear: " + book.getPublishedyear(),book.getBookInfo());
+    }
 }
