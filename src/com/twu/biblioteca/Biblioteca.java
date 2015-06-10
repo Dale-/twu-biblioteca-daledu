@@ -19,6 +19,8 @@ public class Biblioteca {
         }
     }
 
+
+
     public Biblioteca() {
 
     }
@@ -30,6 +32,7 @@ public class Biblioteca {
     public String menu() {
         return "----------Menu----------\n" +
                "[1] List Book Library\n" +
+               "[2] Checkout Book\n" +
                "[0] Quit Biblioteca System\n" +
                "Please Enter Your Choice :";
     }

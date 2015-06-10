@@ -26,4 +26,11 @@ public class User {
     public String getType() {
         return this.type;
     }
+
+    public static User[] UserCollection() {
+        return new User[]{
+                new User("Dale", "0326", "customer"),
+                new User("Dora", "0326", "librarian")
+        };
+    }
 }
