@@ -6,6 +6,7 @@ public class Biblioteca {
 
         Biblioteca biblioteca = new Biblioteca();
         System.out.println(biblioteca.welcome());
+        System.out.println(biblioteca.menu());
     }
 
     public Biblioteca() {
@@ -13,6 +14,11 @@ public class Biblioteca {
     }
 
     public String welcome() {
-        return "---------- WELCOME TO BIBLIOTECA ----------";
+        return "----- WELCOME TO BIBLIOTECA -----\n";
+    }
+
+    public String menu() {
+        return "[1] List Book Library\n" +
+               "[2] Quit Biblioteca System\n";
     }
 }

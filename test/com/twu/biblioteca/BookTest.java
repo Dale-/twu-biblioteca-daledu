@@ -21,21 +21,25 @@ public class BookTest {
         assertEquals("July 8, 1999", book.getPublishedyear());
     }
 
+    @Test
     public void testGetBookInfo() throws Exception {
-        assertEquals("BookName: " + book.getName() + " Author: " + book.getAuthor() + " PublishedYear: " + book.getPublishedyear(),book.getBookInfo());
+        assertEquals(" BookName: " + book.getName() + " Author: " + book.getAuthor() +
+                     " PublishedYear: " + book.getPublishedyear() + "\n", book.getBookInfo());
     }
 
+    @Test
     public void testBookLibrary() throws Exception {
         assertEquals(6, Book.BookLibrary().length);
         assertEquals("Martin Fowler", Book.BookLibrary()[0].getAuthor());
     }
 
-    public void testListBook() throws Exception {
-        String bookLibraryInfo = "";
+    @Test
+    public void testListBookLibrary() throws Exception {
+        String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
         for(int i = 0; i < Book.BookLibrary().length; i++) {
-            bookLibraryInfo += Book.BookLibrary()[i].getBookInfo();
+            bookLibraryInfo += "[" + (i + 1) + "]" + Book.BookLibrary()[i].getBookInfo();
         }
-        assertEquals(bookLibraryInfo,Book.listBook());
+        assertEquals(bookLibraryInfo, Book.listBookLibrary());
     }
 
 }

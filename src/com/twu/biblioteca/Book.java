@@ -25,7 +25,7 @@ public class Book {
     }
 
     public String getBookInfo() {
-        return "BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear;
+        return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear + '\n';
     }
 
     public static Book[] BookLibrary () {
@@ -36,5 +36,13 @@ public class Book {
                 new Book("JavaScript: The Good Parts", " Douglas Crockford", "May, 2008"),
                 new Book("Programming in Scala", " Martin Odersky", "January 4, 2011"),
                 new Book("Head First Java", "Kathy Sierra", "February 9, 2005")};
+    }
+
+    public static String listBookLibrary() {
+        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
+        for(int i = 0; i < Book.BookLibrary().length; i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + Book.BookLibrary()[i].getBookInfo();
+        }
+        return BookLibraryInfo;
     }
 }
