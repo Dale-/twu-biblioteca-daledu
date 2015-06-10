@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by Dale on 6/10/15.
- */
 public class UserTest {
 
     private User user;
@@ -22,5 +19,11 @@ public class UserTest {
         assertEquals("Dale", user.getName());
         assertEquals("0326", user.getPassword());
         assertEquals("customer", user.getType());
+    }
+
+    @Test
+    public void testUserCollection() throws Exception {
+        assertEquals(2, User.UserCollection().length);
+        assertEquals("customer", User.UserCollection()[0].getType());
     }
 }
