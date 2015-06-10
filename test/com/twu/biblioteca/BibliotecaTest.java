@@ -22,7 +22,8 @@ public class BibliotecaTest {
     @Test
     public void testMenu() throws Exception {
         assertEquals("[1] List Book Library\n" +
-                     "[2] Quit Biblioteca System\n", biblioteca.menu());
+                     "[0] Quit Biblioteca System\n" +
+                     "Please Enter Your Choice :" , biblioteca.menu());
     }
 }
 

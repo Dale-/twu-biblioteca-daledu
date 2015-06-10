@@ -4,9 +4,14 @@ public class Biblioteca {
 
     public static void main(String[] args) {
 
+        int choiceNumber = -1;
+        final int quitNumber = 0;
         Biblioteca biblioteca = new Biblioteca();
         System.out.println(biblioteca.welcome());
-        System.out.println(biblioteca.menu());
+        while(choiceNumber != quitNumber) {
+            System.out.println(biblioteca.menu());
+            choiceNumber = Integer.parseInt(InputReader.getInput());
+        }
     }
 
     public Biblioteca() {
@@ -19,6 +24,7 @@ public class Biblioteca {
 
     public String menu() {
         return "[1] List Book Library\n" +
-               "[2] Quit Biblioteca System\n";
+               "[0] Quit Biblioteca System\n" +
+               "Please Enter Your Choice :";
     }
 }
