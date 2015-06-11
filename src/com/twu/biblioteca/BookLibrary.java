@@ -12,7 +12,7 @@ public class BookLibrary {
        // booklibrary.add(book1);
     }
 
-    public static ArrayList<Book> Books() {
+    public ArrayList<Book> initBookLibrary() {
 
         BookLibrary bookLibrary = new BookLibrary();
 
