@@ -8,9 +8,11 @@ import static org.junit.Assert.assertEquals;
 public class BookTest {
 
     private Book book;
+    private BookLibrary bookLibrary;
 
     @Before
     public void setUp() throws Exception {
+        bookLibrary = new BookLibrary();
         book = new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", "July 8, 1999");
     }
 
@@ -30,8 +32,8 @@ public class BookTest {
     @Test
     public void testListBookLibrary() throws Exception {
         String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < BookLibrary.Books().size(); i++) {
-            bookLibraryInfo += "[" + (i + 1) + "]" + BookLibrary.Books().get(i).getBookInfo();
+        for(int i = 0; i < bookLibrary.initBookLibrary().size(); i++) {
+            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.initBookLibrary().get(i).getBookInfo();
         }
         assertEquals(bookLibraryInfo, Book.listBookLibrary());
     }

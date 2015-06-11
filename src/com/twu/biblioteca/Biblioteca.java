@@ -16,9 +16,6 @@ public class Biblioteca {
                     System.out.println(Book.listBookLibrary());
                     break;
                 case 2:
-                    System.out.println(Book.listBookLibrary());
-                    System.out.println("Please input one number that you want to checkout :");
-                    InputReader.getInput();
 
             }
         }
@@ -35,10 +32,21 @@ public class Biblioteca {
     }
 
     public String menu() {
+
         return "----------Menu----------\n" +
                "[1] List Book Library\n" +
                "[2] Checkout Book\n" +
                "[0] Quit Biblioteca System\n" +
                "Please Enter Your Choice :";
+    }
+
+    public void checkoutBook() {
+
+        System.out.println(Book.listBookLibrary());
+        System.out.println("Please input one number that you want to checkout :");
+        int checkoutNumber = Integer.parseInt(InputReader.getInput());
+        BookLibrary bookLibrary = new BookLibrary();
+        bookLibrary.getBooklibrary().remove(checkoutNumber - 1);
+
     }
 }

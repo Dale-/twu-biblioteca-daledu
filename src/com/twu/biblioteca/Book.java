@@ -29,9 +29,10 @@ public class Book {
     }
 
     public static String listBookLibrary() {
+        BookLibrary bookLibrary = new BookLibrary();
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < BookLibrary.Books().size(); i++) {
-            BookLibraryInfo += "[" + (i + 1) + "]" + BookLibrary.Books().get(i).getBookInfo();
+        for(int i = 0; i < bookLibrary.initBookLibrary().size(); i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.initBookLibrary().get(i).getBookInfo();
         }
         return BookLibraryInfo;
     }
