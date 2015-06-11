@@ -15,6 +15,11 @@ public class Biblioteca {
                 case 1:
                     System.out.println(Book.listBookLibrary());
                     break;
+                case 2:
+                    System.out.println(Book.listBookLibrary());
+                    System.out.println("Please input one number that you want to checkout :");
+                    InputReader.getInput();
+
             }
         }
     }
