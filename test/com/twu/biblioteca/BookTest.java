@@ -32,8 +32,8 @@ public class BookTest {
     @Test
     public void testListBookLibrary() throws Exception {
         String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < bookLibrary.initBookLibrary().size(); i++) {
-            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.initBookLibrary().get(i).getBookInfo();
+        for(int i = 0; i < bookLibrary.getBookLibrary().size(); i++) {
+            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
         }
         assertEquals(bookLibraryInfo, Book.listBookLibrary());
     }

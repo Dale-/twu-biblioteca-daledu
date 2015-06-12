@@ -16,6 +16,8 @@ public class Biblioteca {
                     System.out.println(Book.listBookLibrary());
                     break;
                 case 2:
+                    biblioteca.checkoutBook();
+                    break;
 
             }
         }
@@ -42,11 +44,20 @@ public class Biblioteca {
 
     public void checkoutBook() {
 
+        BookLibrary bookLibrary = new BookLibrary();
         System.out.println(Book.listBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
+        System.out.println(bookLibrary.getBookLibrary());
+//        bookLibrary.getBooklibrary().remove(5);
+//        System.out.printf(Book.listBookLibrary());
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
-        BookLibrary bookLibrary = new BookLibrary();
-        bookLibrary.getBooklibrary().remove(checkoutNumber - 1);
-
+        System.out.println(checkoutNumber);
+        try {
+            bookLibrary.getBookLibrary().remove(checkoutNumber - 1);
+            System.out.println("Thank you! Enjoy the book");
+        } catch (Exception e) {
+            System.out.println("That book is not available");
+            e.getMessage();
+        }
     }
 }

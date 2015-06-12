@@ -1,20 +1,20 @@
 package com.twu.biblioteca;
 
-
 import java.util.*;
 
 public class BookLibrary {
 
     private ArrayList books = new ArrayList();
 
-    public static void main(String args[]) {
+    public BookLibrary() {
+        this.initBookLibrary();
+    }
 
+    public static void main(String args[]) {
        // booklibrary.add(book1);
     }
 
     public ArrayList<Book> initBookLibrary() {
-
-        BookLibrary bookLibrary = new BookLibrary();
 
         Book book1 = new Book("Refactoring", "Martin Fowler", "July 8, 1999");
         Book book2 = new Book("Clean Code", "Robert C. Martin ", "August 11, 2008");
@@ -23,18 +23,17 @@ public class BookLibrary {
         Book book5 = new Book("Programming in Scala", " Martin Odersky", "January 4, 2011");
         Book book6 = new Book("Head First Java", "Kathy Sierra", "February 9, 2005");
 
-        ArrayList books = bookLibrary.getBooklibrary();
-        books.add(book1);
-        books.add(book2);
-        books.add(book3);
-        books.add(book4);
-        books.add(book5);
-        books.add(book6);
+        this.books.add(book1);
+        this.books.add(book2);
+        this.books.add(book3);
+        this.books.add(book4);
+        this.books.add(book5);
+        this.books.add(book6);
 
-        return books;
+        return this.books;
     }
 
-    public ArrayList getBooklibrary() {
+    public ArrayList<Book> getBookLibrary() {
         return this.books;
     }
 }

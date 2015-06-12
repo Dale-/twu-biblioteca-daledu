@@ -15,8 +15,8 @@ public class BookLibraryTest {
     }
 
     @Test
-    public void testBooks() {
-        assertEquals(6, bookLibrary.initBookLibrary().size());
-        assertEquals("Martin Fowler", bookLibrary.initBookLibrary().get(0).getAuthor());
+    public void testInitBookLibrary() {
+        assertEquals(6, bookLibrary.getBookLibrary().size());
+        assertEquals("Martin Fowler", bookLibrary.getBookLibrary().get(0).getAuthor());
     }
 }
