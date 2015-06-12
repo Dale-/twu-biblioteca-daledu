@@ -47,9 +47,7 @@ public class Biblioteca {
         BookLibrary bookLibrary = new BookLibrary();
         System.out.println(Book.listBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
-        System.out.println(bookLibrary.getBookLibrary());
-//        bookLibrary.getBooklibrary().remove(5);
-//        System.out.printf(Book.listBookLibrary());
+        System.out.printf(Book.listBookLibrary());
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         System.out.println(checkoutNumber);
         try {
