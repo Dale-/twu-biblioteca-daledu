@@ -1,10 +1,13 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+
 public class Biblioteca {
+
+    private BookLibrary bookLibrary;
 
     public static void main(String[] args) {
 
-        BookLibrary bookLibrary = new BookLibrary();
         int choiceNumber = -1;
         final int quitNumber = 0;
         Biblioteca biblioteca = new Biblioteca();
@@ -14,10 +17,10 @@ public class Biblioteca {
             choiceNumber = Integer.parseInt(InputReader.getInput());
             switch(choiceNumber) {
                 case 1:
-                    System.out.println(bookLibrary.listBookLibrary());
+                    biblioteca.listBookLibrary();
                     break;
                 case 2:
-                    biblioteca.checkoutBook();
+                    biblioteca.checkoutBook(biblioteca.getBookLibrary());
                     break;
 
             }
@@ -25,7 +28,15 @@ public class Biblioteca {
     }
 
     public Biblioteca() {
+        bookLibrary = new BookLibrary();
+    }
 
+    public BookLibrary getBookLibrary() {
+        return this.bookLibrary;
+    }
+
+    public void listBookLibrary() {
+        this.bookLibrary.listBookLibrary();
     }
 
     public String welcome() {
@@ -41,9 +52,8 @@ public class Biblioteca {
                "Please Enter Your Choice :";
     }
 
-    public void checkoutBook() {
+    public void checkoutBook(BookLibrary bookLibrary) {
 
-        BookLibrary bookLibrary = new BookLibrary();
         System.out.println(bookLibrary.listBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
