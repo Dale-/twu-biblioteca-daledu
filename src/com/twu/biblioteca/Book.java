@@ -7,13 +7,11 @@ public class Book {
     private String name;
     private String author;
     private String publishedyear;
-    //public BookLibrary bookLibrary;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
         this.author = author;
         this.publishedyear = publishedyear;
-        //bookLibrary = new BookLibrary();
     }
 
     public String getName() {

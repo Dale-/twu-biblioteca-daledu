@@ -29,5 +29,4 @@ public class BookTest {
                      " PublishedYear: " + book.getPublishedyear() + "\n", book.getBookInfo());
     }
 
-
 }
