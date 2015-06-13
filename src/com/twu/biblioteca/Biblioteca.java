@@ -4,6 +4,7 @@ public class Biblioteca {
 
     public static void main(String[] args) {
 
+        BookLibrary bookLibrary = new BookLibrary();
         int choiceNumber = -1;
         final int quitNumber = 0;
         Biblioteca biblioteca = new Biblioteca();
@@ -13,7 +14,7 @@ public class Biblioteca {
             choiceNumber = Integer.parseInt(InputReader.getInput());
             switch(choiceNumber) {
                 case 1:
-                    System.out.println(Book.listBookLibrary());
+                    System.out.println(bookLibrary.listBookLibrary());
                     break;
                 case 2:
                     biblioteca.checkoutBook();
@@ -22,8 +23,6 @@ public class Biblioteca {
             }
         }
     }
-
-
 
     public Biblioteca() {
 
@@ -45,9 +44,8 @@ public class Biblioteca {
     public void checkoutBook() {
 
         BookLibrary bookLibrary = new BookLibrary();
-        System.out.println(Book.listBookLibrary());
+        System.out.println(bookLibrary.listBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
-        System.out.printf(Book.listBookLibrary());
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         System.out.println(checkoutNumber);
         try {

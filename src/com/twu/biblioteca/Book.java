@@ -1,15 +1,19 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+
 public class Book {
 
     private String name;
     private String author;
     private String publishedyear;
+    //public BookLibrary bookLibrary;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
         this.author = author;
         this.publishedyear = publishedyear;
+        //bookLibrary = new BookLibrary();
     }
 
     public String getName() {
@@ -28,12 +32,7 @@ public class Book {
         return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear + '\n';
     }
 
-    public static String listBookLibrary() {
-        BookLibrary bookLibrary = new BookLibrary();
-        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < bookLibrary.getBookLibrary().size(); i++) {
-            BookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
-        }
-        return BookLibraryInfo;
-    }
+
+
+
 }

@@ -4,17 +4,15 @@ import java.util.*;
 
 public class BookLibrary {
 
-    private ArrayList books = new ArrayList();
+    private ArrayList<Book> library = new ArrayList<Book>();
 
     public BookLibrary() {
-        this.initBookLibrary();
-    }
-
-    public static void main(String args[]) {
-       // booklibrary.add(book1);
+        this.library = this.initBookLibrary();
     }
 
     public ArrayList<Book> initBookLibrary() {
+
+        ArrayList<Book> books = new ArrayList<Book>();
 
         Book book1 = new Book("Refactoring", "Martin Fowler", "July 8, 1999");
         Book book2 = new Book("Clean Code", "Robert C. Martin ", "August 11, 2008");
@@ -23,17 +21,25 @@ public class BookLibrary {
         Book book5 = new Book("Programming in Scala", " Martin Odersky", "January 4, 2011");
         Book book6 = new Book("Head First Java", "Kathy Sierra", "February 9, 2005");
 
-        this.books.add(book1);
-        this.books.add(book2);
-        this.books.add(book3);
-        this.books.add(book4);
-        this.books.add(book5);
-        this.books.add(book6);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        books.add(book4);
+        books.add(book5);
+        books.add(book6);
 
-        return this.books;
+        return books;
     }
 
     public ArrayList<Book> getBookLibrary() {
-        return this.books;
+        return this.library;
+    }
+
+    public String listBookLibrary() {
+        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
+        for(int i = 0; i < this.getBookLibrary().size(); i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + this.getBookLibrary().get(i).getBookInfo();
+        }
+        return BookLibraryInfo;
     }
 }

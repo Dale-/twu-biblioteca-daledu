@@ -29,13 +29,5 @@ public class BookTest {
                      " PublishedYear: " + book.getPublishedyear() + "\n", book.getBookInfo());
     }
 
-    @Test
-    public void testListBookLibrary() throws Exception {
-        String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < bookLibrary.getBookLibrary().size(); i++) {
-            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
-        }
-        assertEquals(bookLibraryInfo, Book.listBookLibrary());
-    }
 
 }
