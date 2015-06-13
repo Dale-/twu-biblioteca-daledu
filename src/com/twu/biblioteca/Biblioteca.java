@@ -35,7 +35,7 @@ public class Biblioteca {
     }
 
     public void listBookLibrary() {
-        this.bookLibrary.listBookLibrary();
+        this.bookLibrary.listBooks(this.bookLibrary.getBookLibrary());
     }
 
     public String welcome() {
@@ -54,7 +54,7 @@ public class Biblioteca {
 
     public void checkoutBook(BookLibrary bookLibrary) {
 
-        bookLibrary.listBookLibrary();
+        bookLibrary.listBooks(bookLibrary.getBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         System.out.println(checkoutNumber);
@@ -65,5 +65,9 @@ public class Biblioteca {
             System.out.println("That book is not available");
             e.getMessage();
         }
+    }
+
+    public void returnBook(BookLibrary bookLibrary) {
+
     }
 }

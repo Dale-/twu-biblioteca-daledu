@@ -28,7 +28,7 @@ public class BookLibraryTest {
         for(int i = 0; i < bookLibrary.getBookLibrary().size(); i++) {
             bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
         }
-        assertEquals(bookLibraryInfo, bookLibrary.listBookLibrary());
+        assertEquals(bookLibraryInfo, bookLibrary.listBooks(bookLibrary.getBookLibrary()));
     }
 
     @Test

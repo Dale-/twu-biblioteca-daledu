@@ -47,10 +47,10 @@ public class BookLibrary {
         return this.borrowedBooks;
     }
 
-    public String listBookLibrary() {
+    public String listBooks(ArrayList<Book> books) {
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < this.getBookLibrary().size(); i++) {
-            BookLibraryInfo += "[" + (i + 1) + "]" + this.getBookLibrary().get(i).getBookInfo();
+        for(int i = 0; i < books.size(); i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + books.get(i).getBookInfo();
         }
         System.out.println(BookLibraryInfo);
         return BookLibraryInfo;
