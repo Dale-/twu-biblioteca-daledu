@@ -3,6 +3,8 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class BookLibraryTest {
@@ -27,6 +29,12 @@ public class BookLibraryTest {
             bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
         }
         assertEquals(bookLibraryInfo, bookLibrary.listBookLibrary());
+    }
+
+    @Test
+    public void testSetBorrowedBook() throws Exception {
+        bookLibrary.setBorrowedBook(1);
+        assertEquals(1, bookLibrary.getBorrowedBooks().size());
     }
 
 }

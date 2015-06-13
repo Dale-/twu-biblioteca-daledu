@@ -4,10 +4,12 @@ import java.util.*;
 
 public class BookLibrary {
 
-    private ArrayList<Book> library = new ArrayList<Book>();
+    private ArrayList<Book> library;
+    private ArrayList<Book> borrowedBooks;
 
     public BookLibrary() {
         this.library = this.initBookLibrary();
+        borrowedBooks = new ArrayList<Book>();
     }
 
     public ArrayList<Book> initBookLibrary() {
@@ -35,11 +37,23 @@ public class BookLibrary {
         return this.library;
     }
 
+    public ArrayList<Book> getBorrowedBooks() {
+        return this.borrowedBooks;
+    }
+
+    public ArrayList<Book> setBorrowedBook(int number) {
+        Book borrowedBook = this.getBookLibrary().get(number - 1);
+        this.borrowedBooks.add(borrowedBook);
+        return this.borrowedBooks;
+    }
+
     public String listBookLibrary() {
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
         for(int i = 0; i < this.getBookLibrary().size(); i++) {
             BookLibraryInfo += "[" + (i + 1) + "]" + this.getBookLibrary().get(i).getBookInfo();
         }
+        System.out.println(BookLibraryInfo);
         return BookLibraryInfo;
     }
+
 }

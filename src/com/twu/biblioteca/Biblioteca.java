@@ -22,7 +22,6 @@ public class Biblioteca {
                 case 2:
                     biblioteca.checkoutBook(biblioteca.getBookLibrary());
                     break;
-
             }
         }
     }
@@ -48,13 +47,14 @@ public class Biblioteca {
         return "----------Menu----------\n" +
                "[1] List Book Library\n" +
                "[2] Checkout Book\n" +
+               "[3] Return Book\n" +
                "[0] Quit Biblioteca System\n" +
                "Please Enter Your Choice :";
     }
 
     public void checkoutBook(BookLibrary bookLibrary) {
 
-        System.out.println(bookLibrary.listBookLibrary());
+        bookLibrary.listBookLibrary();
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         System.out.println(checkoutNumber);
