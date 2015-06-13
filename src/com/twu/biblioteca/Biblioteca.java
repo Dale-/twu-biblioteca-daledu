@@ -22,6 +22,9 @@ public class Biblioteca {
                 case 2:
                     biblioteca.checkoutBook(biblioteca.getBookLibrary());
                     break;
+                case 3:
+                    biblioteca.returnBook(biblioteca.getBookLibrary());
+                    break;
             }
         }
     }
@@ -57,9 +60,9 @@ public class Biblioteca {
         bookLibrary.listBooks(bookLibrary.getBookLibrary());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
-        System.out.println(checkoutNumber);
         try {
             bookLibrary.getBookLibrary().remove(checkoutNumber - 1);
+            bookLibrary.setBorrowedBook(checkoutNumber);
             System.out.println("Thank you! Enjoy the book");
         } catch (Exception e) {
             System.out.println("That book is not available");
@@ -68,6 +71,16 @@ public class Biblioteca {
     }
 
     public void returnBook(BookLibrary bookLibrary) {
-
+        bookLibrary.listBooks(bookLibrary.getBorrowedBooks());
+        System.out.println("Please input one number that you want to return :");
+        int returnNumber = Integer.parseInt(InputReader.getInput());
+        try {
+            bookLibrary.setLibraryBook(returnNumber);
+            bookLibrary.getBorrowedBooks().remove(returnNumber - 1);
+            System.out.println("Thank you for returning the book");
+        } catch (Exception e) {
+            System.out.println("That is not a valid book to return");
+            e.getMessage();
+        }
     }
 }

@@ -47,6 +47,12 @@ public class BookLibrary {
         return this.borrowedBooks;
     }
 
+    public ArrayList<Book> setLibraryBook(int number) {
+        Book libraryBook = this.getBorrowedBooks().get(number - 1);
+        this.library.add(libraryBook);
+        return this.library;
+    }
+
     public String listBooks(ArrayList<Book> books) {
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
         for(int i = 0; i < books.size(); i++) {
@@ -55,5 +61,4 @@ public class BookLibrary {
         System.out.println(BookLibraryInfo);
         return BookLibraryInfo;
     }
-
 }

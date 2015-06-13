@@ -37,4 +37,10 @@ public class BookLibraryTest {
         assertEquals(1, bookLibrary.getBorrowedBooks().size());
     }
 
+    @Test
+    public void testSetLibraryBook() throws Exception {
+        bookLibrary.setBorrowedBook(1);
+        bookLibrary.setLibraryBook(1);
+        assertEquals(7, bookLibrary.getBookLibrary().size());
+    }
 }
