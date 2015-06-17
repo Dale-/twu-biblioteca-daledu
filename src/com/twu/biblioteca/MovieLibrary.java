@@ -74,14 +74,16 @@ public class MovieLibrary {
     }
 
 
-    public void checkoutMovie(MovieLibrary movieLibrary) {
+    public void checkoutMovie(MovieLibrary movieLibrary, User user) {
 
         movieLibrary.listMovies(movieLibrary.getAvailableMovies());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         try {
+            Movie checkoutmovie = movieLibrary.getAvailableMovies().get(checkoutNumber - 1);
             movieLibrary.getAvailableMovies().remove(checkoutNumber - 1);
             movieLibrary.setBorrowedMovie(checkoutNumber);
+            checkoutmovie.setBorrowedName(user.getName());
             System.out.println("Thank you! Enjoy the movie");
         } catch (Exception e) {
             System.out.println("That movie is not available");

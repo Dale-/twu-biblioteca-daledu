@@ -83,8 +83,10 @@ public class BookLibrary {
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         try {
+            Book checkoutBook = bookLibrary.getAvailableBooks().get(checkoutNumber - 1);
             bookLibrary.getAvailableBooks().remove(checkoutNumber - 1);
             bookLibrary.setBorrowedBook(checkoutNumber);
+            checkoutBook.setBorrowedName(user.getName());
             System.out.println("Thank you! Enjoy the book");
         } catch (Exception e) {
             System.out.println("That book is not available");

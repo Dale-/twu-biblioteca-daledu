@@ -34,12 +34,15 @@ public class Movie {
     }
 
     public Boolean getIsBorrowed() {
-
         return this.isBorrowed;
     }
 
     public void setIsBorrowed(Boolean isBorrowed) {
         this.isBorrowed = isBorrowed;
+    }
+
+    public void setBorrowedName(String borrowedName) {
+        this.borrowedName = borrowedName;
     }
 
     public String getBorrowedName() {
