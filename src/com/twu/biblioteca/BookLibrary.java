@@ -5,11 +5,9 @@ import java.util.*;
 public class BookLibrary {
 
     private ArrayList<Book> library;
-    private ArrayList<Book> borrowedBooks;
 
     public BookLibrary() {
         this.library = this.initBookLibrary();
-        borrowedBooks = new ArrayList<Book>();
     }
 
     public ArrayList<Book> initBookLibrary() {
@@ -49,9 +47,10 @@ public class BookLibrary {
         return this.borrowedBooks;
     }
 
-    public ArrayList<Book> setBorrowedBook(int number) {
-        this.getBookLibrary().get(number - 1).setIsCheckout(true);
-        return this.borrowedBooks;
+    public Book setBorrowedBook(int number) {
+        Book borrowedBook = this.getAvailableBooks().get(number - 1);
+        borrowedBook.setIsCheckout(true);
+        return borrowedBook;
     }
 
     public ArrayList<Book> setLibraryBook(int number) {
