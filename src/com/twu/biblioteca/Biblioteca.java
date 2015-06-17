@@ -62,8 +62,27 @@ public class Biblioteca {
                "[1] List Book Library\n" +
                "[2] Checkout Book\n" +
                "[3] Return Book\n" +
-               "[0] Quit Biblioteca System\n" +
+               "[0] Go Back To Main Menu\n" +
                "Please Enter Your Choice :";
+    }
+
+    public String movieMenu() {
+
+        return "-------Movie Menu-------\n" +
+                "[1] List Movie Library\n" +
+                "[2] Checkout Movie\n" +
+                "[3] Return Movie\n" +
+                "[0] Go Back To Main Menu\n" +
+                "Please Enter Your Choice :";
+    }
+
+    public String mainMenu() {
+        return "-------Main Menu-------\n" +
+                "[1] Enter Book Library\n" +
+                "[2] Enter Movie Library\n" +
+                "[3] Show My Profile\n" +
+                "[0] Quit Biblioteca System\n" +
+                "Please Enter Your Choice :";
     }
 
     public void checkoutBook(BookLibrary bookLibrary) {
