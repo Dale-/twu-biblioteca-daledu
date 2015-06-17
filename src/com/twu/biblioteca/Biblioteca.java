@@ -31,24 +31,24 @@ public class Biblioteca {
     }
 
     public Biblioteca() {
-
         bookLibrary = new BookLibrary();
         movieLibrary = new MovieLibrary();
     }
 
     public BookLibrary getBookLibrary() {
-
         return this.bookLibrary;
     }
 
     public MovieLibrary getMovieLibrary() {
-
         return this.movieLibrary;
     }
 
     public void listBookLibrary() {
-
         this.bookLibrary.listBooks(this.bookLibrary.getAvailableBooks());
+    }
+
+    public void listMovieLibrary() {
+        this.movieLibrary.listMovies(this.movieLibrary.getAvailableMovies());
     }
 
     public String welcome() {
