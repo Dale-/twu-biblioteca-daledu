@@ -75,7 +75,7 @@ public class Biblioteca {
         System.out.println("Please input one number that you want to return :");
         int returnNumber = Integer.parseInt(InputReader.getInput());
         try {
-            bookLibrary.setLibraryBook(returnNumber);
+            bookLibrary.setReturnBook(returnNumber);
             bookLibrary.getBorrowedBooks().remove(returnNumber - 1);
             System.out.println("Thank you for returning the book");
         } catch (Exception e) {
