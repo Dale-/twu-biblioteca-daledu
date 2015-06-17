@@ -39,12 +39,12 @@ public class BookLibrary {
         return this.getBooks(true);
     }
 
-    public ArrayList<Book> getBooks(Boolean isCheckout) {
+    public ArrayList<Book> getBooks(Boolean isBorrowed) {
 
         ArrayList<Book> books = new ArrayList<Book>();
 
         for (Book book: this.bookLibrary) {
-            if(book.getIsBorrowed() == isCheckout) {
+            if(book.getIsBorrowed() == isBorrowed) {
                 books.add(book);
             }
         }

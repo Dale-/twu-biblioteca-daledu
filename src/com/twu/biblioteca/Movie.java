@@ -21,15 +21,15 @@ public class Movie {
     }
 
     public String getYear() {
-        return year;
+        return this.year;
     }
 
     public String getDirector() {
-        return director;
+        return this.director;
     }
 
     public int getMovieRating() {
-        return movieRating;
+        return this.movieRating;
     }
 
     public Boolean getIsBorrowed() {

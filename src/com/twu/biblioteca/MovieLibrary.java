@@ -4,76 +4,72 @@ import java.util.ArrayList;
 
 public class MovieLibrary {
 
-    private ArrayList<Book> library;
+    private ArrayList<Movie> movieLibrary;
 
     public MovieLibrary() {
-        this.library = this.initBookLibrary();
+        this.movieLibrary = this.initMovieLibrary();
     }
 
-    public ArrayList<Book> initBookLibrary() {
+    public ArrayList<Movie> initMovieLibrary() {
 
-        ArrayList<Book> books = new ArrayList<Book>();
+        ArrayList<Movie> movies = new ArrayList<Movie>();
 
-        Book book1 = new Book("Refactoring", "Martin Fowler", "July 8, 1999");
-        Book book2 = new Book("Clean Code", "Robert C. Martin ", "August 11, 2008");
-        Book book3 = new Book("Head First Design Patterns", "Eric Freeman", "November 4, 2004");
-        Book book4 = new Book("JavaScript: The Good Parts", " Douglas Crockford", "May, 2008");
-        Book book5 = new Book("Programming in Scala", " Martin Odersky", "January 4, 2011");
-        Book book6 = new Book("Head First Java", "Kathy Sierra", "February 9, 2005");
+        Movie movie1 = new Movie("The Social Network", "2010", "David Fincher", 8);
+        Movie movie2 = new Movie("Pirates of Silicon Valley", "1999", "Martyn Burke", 8);
+        Movie movie3 = new Movie("Steve Jobs - One Last Thing", "2011", "Mimi O'Connor", 9);
+        Movie movie4 = new Movie("The Matrix", "1999", "Andy Wachowski & Lana Wachowski", 9);
 
-        books.add(book1);
-        books.add(book2);
-        books.add(book3);
-        books.add(book4);
-        books.add(book5);
-        books.add(book6);
+        movies.add(movie1);
+        movies.add(movie2);
+        movies.add(movie3);
+        movies.add(movie4);
 
-        return books;
+        return movies;
     }
 
-    public ArrayList<Book> getAvailableBooks() {
-        return this.getBooks(false);
+    public ArrayList<Movie> getAvailableMovies() {
+        return this.getMovies(false);
     }
 
-    public ArrayList<Book> getBorrowedBooks() {
-        return this.getBooks(true);
+    public ArrayList<Movie> getBorrowedMovies() {
+        return this.getMovies(true);
     }
 
-    public ArrayList<Book> getBooks(Boolean isCheckout) {
+    public ArrayList<Movie> getMovies(Boolean isBorrowed) {
 
-        ArrayList<Book> books = new ArrayList<Book>();
+        ArrayList<Movie> movies = new ArrayList<Movie>();
 
-        for (Book book: this.library) {
-            if(book.getIsBorrowed() == isCheckout) {
-                books.add(book);
+        for (Movie movie: this.movieLibrary) {
+            if(movie.getIsBorrowed() == isBorrowed) {
+                movies.add(movie);
             }
         }
 
-        return books;
+        return movies;
     }
 
-    public Book setBorrowedBook(int number) {
+    public Movie setBorrowedMovie(int number) {
 
-        Book borrowedBook = this.getAvailableBooks().get(number - 1);
-        borrowedBook.setIsBorrowed(true);
-        return borrowedBook;
+        Movie borrowedMovie = this.getAvailableMovies().get(number - 1);
+        borrowedMovie.setIsBorrowed(true);
+        return borrowedMovie;
     }
 
-    public Book setReturnBook(int number) {
+    public Movie setReturnMovie(int number) {
 
-        Book returnBook = this.getBorrowedBooks().get(number - 1);
-        returnBook.setIsBorrowed(false);
-        return returnBook;
+        Movie returnMovie = this.getBorrowedMovies().get(number - 1);
+        returnMovie.setIsBorrowed(false);
+        return returnMovie;
     }
 
-    public String listBooks(ArrayList<Book> books) {
+    public String listMovies(ArrayList<Movie> movies) {
 
-        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < books.size(); i++) {
-            BookLibraryInfo += "[" + (i + 1) + "]" + books.get(i).getBookInfo();
+        String MovieLibraryInfo = "-----------------------------------MOVIE LIBRARY-----------------------------------\n";
+        for(int i = 0; i < movies.size(); i++) {
+            MovieLibraryInfo += "[" + (i + 1) + "]" + movies.get(i).getMovieInfo();
         }
-        System.out.println(BookLibraryInfo);
+        System.out.println(MovieLibraryInfo);
 
-        return BookLibraryInfo;
+        return MovieLibraryInfo;
     }
 }
