@@ -46,6 +46,25 @@ public class User {
         return userInfo;
     }
 
+    public static Boolean login(Biblioteca biblioteca) {
+        biblioteca.welcome();
+        System.out.println("UserName: (LIB-XXXX)");
+        String userName = InputReader.getInput();
+        System.out.println("Password:");
+        String password = InputReader.getInput();
+
+        for(User user: User.UserCollection()) {
+            if(user.getName().equals(userName) && user.getPassword().equals(password)) {
+                biblioteca.setUser(user);
+                System.out.println("\nLogin Success!\n");
+                return true;
+            }
+        }
+        System.out.println("----UserName Or Password Wrong----");
+        return false;
+    }
+
+
     public static User[] UserCollection() {
         return new User[]{
                 new User("LIB-0000", "0326", "customer", "daledu@gmail.com", "18717394542"),

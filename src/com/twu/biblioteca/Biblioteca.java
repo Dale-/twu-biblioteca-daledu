@@ -12,7 +12,7 @@ public class Biblioteca {
     public static void main(String[] args) {
 
         Biblioteca biblioteca = new Biblioteca();
-        if(biblioteca.login()) {
+        if(User.login(biblioteca)) {
             biblioteca.showMainMenu(biblioteca);
         }
     }
@@ -20,6 +20,10 @@ public class Biblioteca {
     public Biblioteca() {
         bookLibrary = new BookLibrary();
         movieLibrary = new MovieLibrary();
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public User getUser() {
@@ -42,23 +46,6 @@ public class Biblioteca {
         this.movieLibrary.listMovies(this.movieLibrary.getAvailableMovies());
     }
 
-    public Boolean login() {
-        this.welcome();
-        System.out.println("UserName: (LIB-XXXX)");
-        String userName = InputReader.getInput();
-        System.out.println("Password:");
-        String password = InputReader.getInput();
-
-        for(User user: User.UserCollection()) {
-            if(user.getName().equals(userName) && user.getPassword().equals(password)) {
-                this.user = user;
-                System.out.println("\nLogin Success!\n");
-                return true;
-            }
-        }
-        System.out.println("----UserName Or Password Wrong----");
-        return false;
-    }
 
     public String welcome() {
 
