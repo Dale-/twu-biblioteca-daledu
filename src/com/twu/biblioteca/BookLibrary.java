@@ -32,12 +32,10 @@ public class BookLibrary {
     }
 
     public ArrayList<Book> getAvailableBooks() {
-
         return this.getBooks(false);
     }
 
     public ArrayList<Book> getBorrowedBooks() {
-
         return this.getBooks(true);
     }
 
@@ -55,23 +53,27 @@ public class BookLibrary {
     }
 
     public Book setBorrowedBook(int number) {
+
         Book borrowedBook = this.getAvailableBooks().get(number - 1);
         borrowedBook.setIsBorrowed(true);
         return borrowedBook;
     }
 
     public Book setReturnBook(int number) {
+
         Book returnBook = this.getBorrowedBooks().get(number - 1);
         returnBook.setIsBorrowed(false);
         return returnBook;
     }
 
     public String listBooks(ArrayList<Book> books) {
+
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
         for(int i = 0; i < books.size(); i++) {
             BookLibraryInfo += "[" + (i + 1) + "]" + books.get(i).getBookInfo();
         }
         System.out.println(BookLibraryInfo);
+
         return BookLibraryInfo;
     }
 }

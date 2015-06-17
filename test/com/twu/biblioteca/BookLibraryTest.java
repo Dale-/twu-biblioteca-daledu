@@ -50,13 +50,13 @@ public class BookLibraryTest {
         assertEquals("Head First Java", bookLibrary.setBorrowedBook(6).getName());
         assertEquals(" Martin Odersky", bookLibrary.setBorrowedBook(5).getAuthor());
     }
-//
-//    @Test
-//    public void testSetReturnBook() throws Exception {
-//        assertEquals("Refactoring", bookLibrary.setReturnBook(1).getName());
-//        assertEquals("Martin Fowler", bookLibrary.setReturnBook(1).getAuthor());
-//    }
-//
+
+    @Test
+    public void testSetReturnBook() throws Exception {
+        bookLibrary.setBorrowedBook(1);
+        assertEquals("Refactoring", bookLibrary.setReturnBook(1).getName());
+    }
+
 //    @Test
 //    public void testListBookLibrary() throws Exception {
 //        String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
