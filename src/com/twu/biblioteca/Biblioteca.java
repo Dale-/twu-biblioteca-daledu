@@ -10,12 +10,12 @@ public class Biblioteca {
 
     public static void main(String[] args) {
 
-        int choiceNumber = -1;
-        final int quitNumber = 0;
+//        int choiceNumber = -1;
+//        final int quitNumber = 0;
         Biblioteca biblioteca = new Biblioteca();
         System.out.println(biblioteca.welcome());
         while(choiceNumber != quitNumber) {
-//            System.out.println(biblioteca.menu());
+            System.out.println(biblioteca.menu());
             choiceNumber = Integer.parseInt(InputReader.getInput());
             switch(choiceNumber) {
                 case 1:
@@ -86,10 +86,23 @@ public class Biblioteca {
                 "Please Enter Your Choice :";
     }
 
-    public void showMainMenu() {
+    public void showMainMenu(Biblioteca biblioteca) {
         int input = -1;
-
-        while(input)
+        while(input != quitNumber) {
+            System.out.println(this.mainMenu());
+            input = Integer.parseInt(InputReader.getInput());
+            switch(input) {
+                case 1:
+                    biblioteca.showBookLibrary(biblioteca);
+                    break;
+                case 2:
+                    biblioteca.showMovieLibrary(biblioteca);
+                    break;
+                case 3:
+                    biblioteca.showUserInfo(biblioteca.getUser());
+                    break;
+            }
+        }
     }
 
 
