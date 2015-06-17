@@ -40,8 +40,8 @@ public class User {
     }
 
     public String printUserInfo() {
-        String userInfo = "\tName: " + this.name + "\n\tType: " + this.type + "\n" +
-                          "\tEmail: " + this.email + "\n\tPhoneNumber: " + this.phoneNumber + "\n";
+        String userInfo = "\n-----User Info-----" + "\nName: " + this.name + "\nType: " + this.type + "\n" +
+                          "Email: " + this.email + "\nPhoneNumber: " + this.phoneNumber + "\n";
         System.out.println(userInfo);
         return userInfo;
     }

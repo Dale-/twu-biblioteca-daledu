@@ -12,9 +12,9 @@ public class Biblioteca {
     public static void main(String[] args) {
 
         Biblioteca biblioteca = new Biblioteca();
-        System.out.println(biblioteca.welcome());
-        biblioteca.showMainMenu(biblioteca);
-
+        if(biblioteca.login()) {
+            biblioteca.showMainMenu(biblioteca);
+        }
     }
 
     public Biblioteca() {
@@ -42,17 +42,29 @@ public class Biblioteca {
         this.movieLibrary.listMovies(this.movieLibrary.getAvailableMovies());
     }
 
-//    public User login() {
-//        User user;
-//
-//        System.out.println("");
-//
-//        return user;
-//    }
+    public Boolean login() {
+        this.welcome();
+        System.out.println("UserName: (LIB-XXXX)");
+        String userName = InputReader.getInput();
+        System.out.println("Password:");
+        String password = InputReader.getInput();
+
+        for(User user: User.UserCollection()) {
+            if(user.getName().equals(userName) && user.getPassword().equals(password)) {
+                this.user = user;
+                System.out.println("\nLogin Success!\n");
+                return true;
+            }
+        }
+        System.out.println("----UserName Or Password Wrong----");
+        return false;
+    }
 
     public String welcome() {
 
-        return "----- WELCOME TO BIBLIOTECA -----\n";
+        String welcomeInfo = "----- WELCOME TO BIBLIOTECA -----\n";
+        System.out.println(welcomeInfo);
+        return welcomeInfo;
     }
 
     public String mainMenu() {
@@ -112,9 +124,11 @@ public class Biblioteca {
                 case 2:
                     biblioteca.showMovieLibrary(biblioteca);
                     break;
-//                case 3:
-//                    biblioteca.showUserInfo(biblioteca.getUser());
-//                    break;
+                case 3:
+                    biblioteca.getUser().printUserInfo();
+                    break;
+                default:
+                    System.out.println("-----EXIT BIBLIOTECA-----");
             }
         }
     }

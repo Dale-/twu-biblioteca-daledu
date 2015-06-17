@@ -25,8 +25,8 @@ public class UserTest {
 
     @Test
     public void testPrintUserInfo() throws Exception {
-        String userInfo = "\tName: " + user.getName() + "\n\tType: " + user.getType() + "\n" +
-                          "\tEmail: " + user.getEmail() + "\n\tPhoneNumber: " + user.getPhoneNumber() + "\n";
+        String userInfo = "\n-----User Info-----" + "\nName: " + user.getName() + "\nType: " + user.getType() +
+                          "\nEmail: " + user.getEmail() + "\nPhoneNumber: " + user.getPhoneNumber() + "\n";
         assertEquals(userInfo, user.printUserInfo());
     }
 
