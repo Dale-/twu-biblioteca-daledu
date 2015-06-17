@@ -72,4 +72,34 @@ public class MovieLibrary {
 
         return MovieLibraryInfo;
     }
+
+
+    public void checkoutMovie(MovieLibrary movieLibrary) {
+
+        movieLibrary.listMovies(movieLibrary.getAvailableMovies());
+        System.out.println("Please input one number that you want to checkout :");
+        int checkoutNumber = Integer.parseInt(InputReader.getInput());
+        try {
+            movieLibrary.getAvailableMovies().remove(checkoutNumber - 1);
+            movieLibrary.setBorrowedMovie(checkoutNumber);
+            System.out.println("Thank you! Enjoy the movie");
+        } catch (Exception e) {
+            System.out.println("That movie is not available");
+            e.getMessage();
+        }
+    }
+
+    public void returnMovie(MovieLibrary movieLibrary) {
+        movieLibrary.listMovies(movieLibrary.getBorrowedMovies());
+        System.out.println("Please input one number that you want to return :");
+        int returnNumber = Integer.parseInt(InputReader.getInput());
+        try {
+            movieLibrary.setReturnMovie(returnNumber);
+            movieLibrary.getBorrowedMovies().remove(returnNumber - 1);
+            System.out.println("Thank you for returning the movie");
+        } catch (Exception e) {
+            System.out.println("That is not a valid movie to return");
+            e.getMessage();
+        }
+    }
 }

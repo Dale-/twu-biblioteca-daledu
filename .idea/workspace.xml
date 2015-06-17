@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieLibrary.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovieLibrary.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="75" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.08906882">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="e#157#158#0" expanded="true" />
                 <element signature="e#216#217#0" expanded="true" />
@@ -134,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookLibrary.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookLibrary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BookLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8785425">
-              <caret line="106" column="5" selection-start-line="79" selection-start-column="4" selection-end-line="106" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="106" selection-end-column="5" />
               <folding>
                 <element signature="e#145#146#0" expanded="true" />
                 <element signature="e#202#203#0" expanded="true" />
@@ -196,12 +196,12 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookLibraryTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLibrary.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieLibraryTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookLibrary.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLibrary.java" />
       </list>
     </option>
   </component>
@@ -843,12 +843,12 @@
       <workItem from="1434270132832" duration="7083000" />
       <workItem from="1434333789539" duration="543000" />
       <workItem from="1434446331952" duration="13000" />
-      <workItem from="1434505202567" duration="15094000" />
+      <workItem from="1434505202567" duration="15548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86190000" />
+    <option name="totallyTimeSpent" value="86644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="217" y="70" width="1074" height="824" extended-state="6" />
@@ -1302,23 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="75" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="75" />
-          <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#316#323#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1131#1138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1360,8 +1343,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BookLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8785425">
-          <caret line="106" column="5" selection-start-line="79" selection-start-column="4" selection-end-line="106" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="106" selection-end-column="5" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
             <element signature="e#202#203#0" expanded="true" />
@@ -1370,6 +1353,23 @@
             <element signature="e#1169#1170#0" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
             <element signature="e#1318#1324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08906882">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#316#323#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1131#1138#0" expanded="true" />
           </folding>
         </state>
       </provider>
