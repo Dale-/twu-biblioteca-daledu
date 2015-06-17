@@ -33,8 +33,16 @@ public class BookLibrary {
         return books;
     }
 
-    public ArrayList<Book> getBookLibrary() {
-        return this.library;
+    public ArrayList<Book> getAvailableBooks() {
+
+        ArrayList<Book> availableBooks = new ArrayList<Book>();
+
+        for (Book book: this.library) {
+            if(book.getIsCheckout()) {
+                availableBooks.add(book);
+            }
+        }
+        return availableBooks;
     }
 
     public ArrayList<Book> getBorrowedBooks() {
@@ -42,8 +50,7 @@ public class BookLibrary {
     }
 
     public ArrayList<Book> setBorrowedBook(int number) {
-        Book borrowedBook = this.getBookLibrary().get(number - 1);
-        this.borrowedBooks.add(borrowedBook);
+        this.getBookLibrary().get(number - 1).setIsCheckout(true);
         return this.borrowedBooks;
     }
 
