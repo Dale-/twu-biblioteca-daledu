@@ -66,6 +66,22 @@ public class Biblioteca {
                 "Please Enter Your Choice :";
     }
 
+    public void checkoutBook(BookLibrary bookLibrary) {
+        bookLibrary.checkoutBook(bookLibrary);
+    }
+
+    public void returnBook(BookLibrary bookLibrary) {
+        bookLibrary.returnBook(bookLibrary);
+    }
+
+    public void checkoutMovie(MovieLibrary movieLibrary) {
+        movieLibrary.checkoutMovie(movieLibrary);
+    }
+
+    public void returnMovie(MovieLibrary movieLibrary) {
+        movieLibrary.returnMovie(movieLibrary);
+    }
+
     public String bookMenu() {
 
         return "-------Book Menu-------\n" +
@@ -124,11 +140,22 @@ public class Biblioteca {
         }
     }
 
-    public void checkoutBook(BookLibrary bookLibrary) {
-        bookLibrary.checkoutBook(bookLibrary);
-    }
-
-    public void returnBook(BookLibrary bookLibrary) {
-        bookLibrary.returnBook(bookLibrary);
-    }
+//    public void showBookLibrary(Biblioteca biblioteca) {
+//        int input = -1;
+//        while(input != quitNumber) {
+//            System.out.println(this.bookMenu());
+//            input = Integer.parseInt(InputReader.getInput());
+//            switch(input) {
+//                case 1:
+//                    biblioteca.listBookLibrary();
+//                    break;
+//                case 2:
+//                    biblioteca.checkoutBook(biblioteca.getBookLibrary());
+//                    break;
+//                case 3:
+//                    biblioteca.returnBook(biblioteca.getBookLibrary());
+//                    break;
+//            }
+//        }
+//    }
 }
