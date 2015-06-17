@@ -38,7 +38,7 @@ public class Biblioteca {
     }
 
     public void listBookLibrary() {
-        this.bookLibrary.listBooks(this.bookLibrary.getBookLibrary());
+        this.bookLibrary.listBooks(this.bookLibrary.getAvailableBooks());
     }
 
     public String welcome() {
@@ -57,11 +57,11 @@ public class Biblioteca {
 
     public void checkoutBook(BookLibrary bookLibrary) {
 
-        bookLibrary.listBooks(bookLibrary.getBookLibrary());
+        bookLibrary.listBooks(bookLibrary.getAvailableBooks());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
         try {
-            bookLibrary.getBookLibrary().remove(checkoutNumber - 1);
+            bookLibrary.getAvailableBooks().remove(checkoutNumber - 1);
             bookLibrary.setBorrowedBook(checkoutNumber);
             System.out.println("Thank you! Enjoy the book");
         } catch (Exception e) {

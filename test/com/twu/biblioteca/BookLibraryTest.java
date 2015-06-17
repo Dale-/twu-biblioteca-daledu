@@ -18,17 +18,17 @@ public class BookLibraryTest {
 
     @Test
     public void testInitBookLibrary() {
-        assertEquals(6, bookLibrary.getBookLibrary().size());
-        assertEquals("Martin Fowler", bookLibrary.getBookLibrary().get(0).getAuthor());
+        assertEquals(6, bookLibrary.getAvailableBooks().size());
+        assertEquals("Martin Fowler", bookLibrary.getAvailableBooks().get(0).getAuthor());
     }
 
     @Test
     public void testListBookLibrary() throws Exception {
         String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-        for(int i = 0; i < bookLibrary.getBookLibrary().size(); i++) {
-            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getBookLibrary().get(i).getBookInfo();
+        for(int i = 0; i < bookLibrary.getAvailableBooks().size(); i++) {
+            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getAvailableBooks().get(i).getBookInfo();
         }
-        assertEquals(bookLibraryInfo, bookLibrary.listBooks(bookLibrary.getBookLibrary()));
+        assertEquals(bookLibraryInfo, bookLibrary.listBooks(bookLibrary.getAvailableBooks()));
     }
 
     @Test
@@ -41,6 +41,6 @@ public class BookLibraryTest {
     public void testSetLibraryBook() throws Exception {
         bookLibrary.setBorrowedBook(1);
         bookLibrary.setLibraryBook(1);
-        assertEquals(7, bookLibrary.getBookLibrary().size());
+        assertEquals(7, bookLibrary.getAvailableBooks().size());
     }
 }

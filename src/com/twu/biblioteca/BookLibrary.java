@@ -33,12 +33,12 @@ public class BookLibrary {
 
     public ArrayList<Book> getAvailableBooks() {
 
-        return this.getBooks(true);
+        return this.getBooks(false);
     }
 
     public ArrayList<Book> getBorrowedBooks() {
 
-        return this.getBooks(false);
+        return this.getBooks(true);
     }
 
     public ArrayList<Book> getBooks(Boolean isCheckout) {
@@ -60,10 +60,10 @@ public class BookLibrary {
         return borrowedBook;
     }
 
-    public ArrayList<Book> setLibraryBook(int number) {
-        Book libraryBook = this.getBorrowedBooks().get(number - 1);
-        this.library.add(libraryBook);
-        return this.library;
+    public Book setReturnBook(int number) {
+        Book returnBook = this.getBorrowedBooks().get(number - 1);
+        returnBook.setIsBorrowed(false);
+        return returnBook;
     }
 
     public String listBooks(ArrayList<Book> books) {
