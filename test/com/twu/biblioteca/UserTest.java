@@ -32,7 +32,7 @@ public class UserTest {
 
     @Test
     public void testUserCollection() throws Exception {
-        assertEquals(2, User.UserCollection().length);
+        assertEquals(4, User.UserCollection().length);
         assertEquals("customer", User.UserCollection()[0].getType());
     }
 }

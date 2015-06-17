@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Biblioteca {
 
+    private User user;
     private BookLibrary bookLibrary;
     private MovieLibrary movieLibrary;
     public static final int quitNumber = 0;
@@ -21,6 +22,10 @@ public class Biblioteca {
         movieLibrary = new MovieLibrary();
     }
 
+    public User getUser() {
+        return this.user;
+    }
+
     public BookLibrary getBookLibrary() {
         return this.bookLibrary;
     }
@@ -36,6 +41,14 @@ public class Biblioteca {
     public void listMovieLibrary() {
         this.movieLibrary.listMovies(this.movieLibrary.getAvailableMovies());
     }
+
+//    public User login() {
+//        User user;
+//
+//        System.out.println("");
+//
+//        return user;
+//    }
 
     public String welcome() {
 

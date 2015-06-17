@@ -48,8 +48,10 @@ public class User {
 
     public static User[] UserCollection() {
         return new User[]{
-                new User("Dale", "0326", "customer", "daledu@gmail.com", "18717394542"),
-                new User("Dora", "0326", "librarian", "dora@gmail.com", "18717394542")
+                new User("LIB-0000", "0326", "customer", "daledu@gmail.com", "18717394542"),
+                new User("LIB-0001", "0326", "customer", "daledu@gmail.com", "18717394542"),
+                new User("LIB-1001", "0326", "librarian", "dora@gmail.com", "18717394542"),
+                new User("LIB-1000", "0326", "librarian", "dora@gmail.com", "18717394542")
         };
     }
 }
