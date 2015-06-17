@@ -66,12 +66,6 @@ public class BookLibrary {
         return returnBook;
     }
 
-//    public Book setIsBorrowedOfBook(int number, Boolean isBorrowed) {
-//        Book book = this.getBorrowedBooks().get(number - 1);
-//        book.setIsBorrowed(isBorrowed);
-//        return book;
-//    }
-
     public String listBooks(ArrayList<Book> books) {
         String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
         for(int i = 0; i < books.size(); i++) {

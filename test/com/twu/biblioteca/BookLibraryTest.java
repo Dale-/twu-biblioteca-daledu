@@ -23,28 +23,28 @@ public class BookLibraryTest {
         assertEquals("Martin Fowler", bookLibrary.getAvailableBooks().get(0).getAuthor());
     }
 
-//    @Test
-//    public void testGetAvailableBooks() {
-//        bookLibrary.setBorrowedBook(3);
-//        assertEquals(5, bookLibrary.getAvailableBooks().size());
-//        assertEquals("Martin Fowler", bookLibrary.getAvailableBooks().get(0).getAuthor());
-//    }
-//
-//    @Test
-//    public void testGetBorrowedBooks() {
-//        bookLibrary.setBorrowedBook(1);
-//        assertEquals(1, bookLibrary.getBorrowedBooks().size());
-//        assertEquals("Martin Fowler", bookLibrary.getBorrowedBooks().get(0).getAuthor());
-//    }
-//
-//    @Test
-//    public void testGetBooks() {
-//        bookLibrary.setBorrowedBook(6);
-//        bookLibrary.setBorrowedBook(5);
-//        assertEquals(4, bookLibrary.getBooks(false));
-//        assertEquals(2, bookLibrary.getBooks(true));
-//    }
-//
+    @Test
+    public void testGetAvailableBooks() {
+        bookLibrary.setBorrowedBook(3);
+        assertEquals(5, bookLibrary.getAvailableBooks().size());
+        assertEquals("Martin Fowler", bookLibrary.getAvailableBooks().get(0).getAuthor());
+    }
+
+    @Test
+    public void testGetBorrowedBooks() {
+        bookLibrary.setBorrowedBook(1);
+        assertEquals(1, bookLibrary.getBorrowedBooks().size());
+        assertEquals("Martin Fowler", bookLibrary.getBorrowedBooks().get(0).getAuthor());
+    }
+
+    @Test
+    public void testGetBooks() {
+        bookLibrary.setBorrowedBook(6);
+        bookLibrary.setBorrowedBook(5);
+        assertEquals(2, bookLibrary.getBooks(true).size());
+        assertEquals(4, bookLibrary.getBooks(false).size());
+    }
+
     @Test
     public void testSetBorrowedBook() throws Exception {
         assertEquals("Head First Java", bookLibrary.setBorrowedBook(6).getName());
