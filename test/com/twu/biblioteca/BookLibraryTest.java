@@ -57,13 +57,13 @@ public class BookLibraryTest {
         assertEquals("Refactoring", bookLibrary.setReturnBook(1).getName());
     }
 
-//    @Test
-//    public void testListBookLibrary() throws Exception {
-//        String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
-//        for(int i = 0; i < bookLibrary.getAvailableBooks().size(); i++) {
-//            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getAvailableBooks().get(i).getBookInfo();
-//        }
-//        assertEquals(bookLibraryInfo, bookLibrary.listBooks(bookLibrary.getAvailableBooks()));
-//    }
+    @Test
+    public void testListBookLibrary() throws Exception {
+        String bookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
+        for(int i = 0; i < bookLibrary.getAvailableBooks().size(); i++) {
+            bookLibraryInfo += "[" + (i + 1) + "]" + bookLibrary.getAvailableBooks().get(i).getBookInfo();
+        }
+        assertEquals(bookLibraryInfo, bookLibrary.listBooks(bookLibrary.getAvailableBooks()));
+    }
 
 }
