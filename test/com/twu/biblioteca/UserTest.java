@@ -24,6 +24,13 @@ public class UserTest {
     }
 
     @Test
+    public void testPrintUserInfo() throws Exception {
+        String userInfo = "\tName: " + user.getName() + "\n\tType: " + user.getType() + "\n" +
+                          "\tEmail: " + user.getEmail() + "\n\tPhoneNumber: " + user.getPhoneNumber() + "\n";
+        assertEquals(userInfo, user.printUserInfo());
+    }
+
+    @Test
     public void testUserCollection() throws Exception {
         assertEquals(2, User.UserCollection().length);
         assertEquals("customer", User.UserCollection()[0].getType());
