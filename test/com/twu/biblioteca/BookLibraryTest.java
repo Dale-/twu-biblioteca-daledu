@@ -48,7 +48,7 @@ public class BookLibraryTest {
     @Test
     public void testSetBorrowedBook() throws Exception {
         assertEquals("Head First Java", bookLibrary.setBorrowedBook(6).getName());
-        assertEquals(" Martin Odersky", bookLibrary.setBorrowedBook(5).getAuthor());
+        assertEquals("Martin Odersky", bookLibrary.setBorrowedBook(5).getAuthor());
     }
 
     @Test
