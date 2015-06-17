@@ -7,6 +7,7 @@ public class Movie {
     private String director;
     private int movieRating;
     private Boolean isBorrowed;
+    private String borrowedName;
 
     public Movie(String name, String year, String director, int movieRating) {
         this.name = name;
@@ -39,6 +40,10 @@ public class Movie {
 
     public void setIsBorrowed(Boolean isBorrowed) {
         this.isBorrowed = isBorrowed;
+    }
+
+    public String getBorrowedName() {
+        return borrowedName;
     }
 
     public String getMovieInfo() {
