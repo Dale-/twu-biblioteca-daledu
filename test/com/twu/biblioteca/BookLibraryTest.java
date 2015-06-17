@@ -38,7 +38,10 @@ public class BookLibraryTest {
 
     @Test
     public void testGetBooks() {
-        
+        bookLibrary.setBorrowedBook(6);
+        bookLibrary.setBorrowedBook(5);
+        assertEquals(4, bookLibrary.getBooks(false));
+        assertEquals(2, bookLibrary.getBooks(true));
     }
 
     @Test
