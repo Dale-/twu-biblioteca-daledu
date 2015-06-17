@@ -82,6 +82,7 @@ public class BookLibrary {
         bookLibrary.listBooks(bookLibrary.getAvailableBooks());
         System.out.println("Please input one number that you want to checkout :");
         int checkoutNumber = Integer.parseInt(InputReader.getInput());
+
         try {
             Book checkoutBook = bookLibrary.getAvailableBooks().get(checkoutNumber - 1);
             bookLibrary.getAvailableBooks().remove(checkoutNumber - 1);
@@ -98,6 +99,7 @@ public class BookLibrary {
         bookLibrary.listBooks(bookLibrary.getBorrowedBooks());
         System.out.println("Please input one number that you want to return :");
         int returnNumber = Integer.parseInt(InputReader.getInput());
+
         try {
             bookLibrary.setReturnBook(returnNumber);
             bookLibrary.getBorrowedBooks().remove(returnNumber - 1);

@@ -64,7 +64,7 @@ public class Biblioteca {
     }
 
     public void checkoutBook(BookLibrary bookLibrary) {
-        bookLibrary.checkoutBook(bookLibrary);
+        bookLibrary.checkoutBook(bookLibrary, this.user);
     }
 
     public void returnBook(BookLibrary bookLibrary) {
@@ -72,7 +72,7 @@ public class Biblioteca {
     }
 
     public void checkoutMovie(MovieLibrary movieLibrary) {
-        movieLibrary.checkoutMovie(movieLibrary);
+        movieLibrary.checkoutMovie(movieLibrary, this.user);
     }
 
     public void returnMovie(MovieLibrary movieLibrary) {
