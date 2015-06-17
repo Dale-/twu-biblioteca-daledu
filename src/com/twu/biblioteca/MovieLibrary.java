@@ -1,13 +1,13 @@
 package com.twu.biblioteca;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class BookLibrary {
+public class MovieLibrary {
 
-    private ArrayList<Book> bookLibrary;
+    private ArrayList<Book> library;
 
-    public BookLibrary() {
-        this.bookLibrary = this.initBookLibrary();
+    public MovieLibrary() {
+        this.library = this.initBookLibrary();
     }
 
     public ArrayList<Book> initBookLibrary() {
@@ -43,7 +43,7 @@ public class BookLibrary {
 
         ArrayList<Book> books = new ArrayList<Book>();
 
-        for (Book book: this.bookLibrary) {
+        for (Book book: this.library) {
             if(book.getIsBorrowed() == isCheckout) {
                 books.add(book);
             }
