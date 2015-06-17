@@ -1,19 +1,17 @@
 package com.twu.biblioteca;
 
-import java.util.ArrayList;
-
 public class Book {
 
     private String name;
     private String author;
     private String publishedyear;
-    private Boolean isCheckout;
+    private Boolean isBorrowed;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
         this.author = author;
         this.publishedyear = publishedyear;
-        this.isCheckout = false;
+        this.isBorrowed = false;
     }
 
     public String getName() {
@@ -30,13 +28,13 @@ public class Book {
         return this.publishedyear;
     }
 
-    public Boolean getIsCheckout() {
+    public Boolean getIsBorrowed() {
 
-        return this.isCheckout;
+        return this.isBorrowed;
     }
 
-    public void setIsCheckout(Boolean isCheckout) {
-        this.isCheckout = isCheckout;
+    public void setIsBorrowed(Boolean isBorrowed) {
+        this.isBorrowed = isBorrowed;
     }
 
     public String getBookInfo() {

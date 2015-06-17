@@ -46,7 +46,7 @@ public class BookLibrary {
         ArrayList<Book> books = new ArrayList<Book>();
 
         for (Book book: this.library) {
-            if(book.getIsCheckout() == isCheckout) {
+            if(book.getIsBorrowed() == isCheckout) {
                 books.add(book);
             }
         }
@@ -56,7 +56,7 @@ public class BookLibrary {
 
     public Book setBorrowedBook(int number) {
         Book borrowedBook = this.getAvailableBooks().get(number - 1);
-        borrowedBook.setIsCheckout(true);
+        borrowedBook.setIsBorrowed(true);
         return borrowedBook;
     }
 
