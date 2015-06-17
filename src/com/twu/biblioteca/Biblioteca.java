@@ -57,6 +57,15 @@ public class Biblioteca {
         return "----- WELCOME TO BIBLIOTECA -----\n";
     }
 
+    public String mainMenu() {
+        return "-------Main Menu-------\n" +
+                "[1] Enter Book Library\n" +
+                "[2] Enter Movie Library\n" +
+                "[3] Show My Profile\n" +
+                "[0] Quit Biblioteca System\n" +
+                "Please Enter Your Choice :";
+    }
+
     public String bookMenu() {
 
         return "-------Book Menu-------\n" +
@@ -74,15 +83,6 @@ public class Biblioteca {
                 "[2] Checkout Movie\n" +
                 "[3] Return Movie\n" +
                 "[0] Go Back To Main Menu\n" +
-                "Please Enter Your Choice :";
-    }
-
-    public String mainMenu() {
-        return "-------Main Menu-------\n" +
-                "[1] Enter Book Library\n" +
-                "[2] Enter Movie Library\n" +
-                "[3] Show My Profile\n" +
-                "[0] Quit Biblioteca System\n" +
                 "Please Enter Your Choice :";
     }
 
@@ -105,6 +105,24 @@ public class Biblioteca {
         }
     }
 
+    public void showBookLibrary(Biblioteca biblioteca) {
+        int input = -1;
+        while(input != quitNumber) {
+            System.out.println(this.bookMenu());
+            input = Integer.parseInt(InputReader.getInput());
+            switch(input) {
+                case 1:
+                    biblioteca.listBookLibrary();
+                    break;
+                case 2:
+                    biblioteca.checkoutBook(biblioteca.getBookLibrary());
+                    break;
+                case 3:
+                    biblioteca.returnBook(biblioteca.getBookLibrary());
+                    break;
+            }
+        }
+    }
 
     public void checkoutBook(BookLibrary bookLibrary) {
         bookLibrary.checkoutBook(bookLibrary);
