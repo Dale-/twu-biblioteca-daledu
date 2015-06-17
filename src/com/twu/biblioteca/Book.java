@@ -35,6 +35,10 @@ public class Book {
         return this.isCheckout;
     }
 
+    public void setIsCheckout(Boolean isCheckout) {
+        this.isCheckout = isCheckout;
+    }
+
     public String getBookInfo() {
         return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear + '\n';
     }
