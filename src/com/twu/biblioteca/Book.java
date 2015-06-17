@@ -7,11 +7,13 @@ public class Book {
     private String name;
     private String author;
     private String publishedyear;
+    private Boolean isCheckout;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
         this.author = author;
         this.publishedyear = publishedyear;
+        this.isCheckout = false;
     }
 
     public String getName() {
