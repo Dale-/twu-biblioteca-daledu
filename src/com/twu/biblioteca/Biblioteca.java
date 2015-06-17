@@ -56,9 +56,9 @@ public class Biblioteca {
         return "----- WELCOME TO BIBLIOTECA -----\n";
     }
 
-    public String menu() {
+    public String bookMenu() {
 
-        return "----------Menu----------\n" +
+        return "-------Book Menu-------\n" +
                "[1] List Book Library\n" +
                "[2] Checkout Book\n" +
                "[3] Return Book\n" +
