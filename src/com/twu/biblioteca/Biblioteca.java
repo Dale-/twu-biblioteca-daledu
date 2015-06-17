@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Biblioteca {
 
     private BookLibrary bookLibrary;
+    private MovieLibrary movieLibrary;
 
     public static void main(String[] args) {
 
@@ -30,18 +31,28 @@ public class Biblioteca {
     }
 
     public Biblioteca() {
+
         bookLibrary = new BookLibrary();
+        movieLibrary = new MovieLibrary();
     }
 
     public BookLibrary getBookLibrary() {
+
         return this.bookLibrary;
     }
 
+    public MovieLibrary getMovieLibrary() {
+
+        return this.movieLibrary;
+    }
+
     public void listBookLibrary() {
+
         this.bookLibrary.listBooks(this.bookLibrary.getAvailableBooks());
     }
 
     public String welcome() {
+
         return "----- WELCOME TO BIBLIOTECA -----\n";
     }
 
