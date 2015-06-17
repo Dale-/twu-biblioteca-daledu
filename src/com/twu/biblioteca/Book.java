@@ -38,6 +38,10 @@ public class Book {
         this.isBorrowed = isBorrowed;
     }
 
+    public void setBorrowedName(String borrowedName) {
+        this.borrowedName = borrowedName;
+    }
+
     public String getBorrowedName() {
         return borrowedName;
     }

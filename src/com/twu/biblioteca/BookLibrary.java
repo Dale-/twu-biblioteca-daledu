@@ -77,7 +77,7 @@ public class BookLibrary {
         return BookLibraryInfo;
     }
 
-    public void checkoutBook(BookLibrary bookLibrary) {
+    public void checkoutBook(BookLibrary bookLibrary, User user) {
 
         bookLibrary.listBooks(bookLibrary.getAvailableBooks());
         System.out.println("Please input one number that you want to checkout :");
