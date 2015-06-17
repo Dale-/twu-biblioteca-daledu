@@ -6,6 +6,8 @@ public class Book {
     private String author;
     private String publishedyear;
     private Boolean isBorrowed;
+    private String borrowedName;
+
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
@@ -37,6 +39,10 @@ public class Book {
         this.isBorrowed = isBorrowed;
     }
 
+    public String getBorrowedName() {
+        return borrowedName;
+    }
+    
     public String getBookInfo() {
         return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear + '\n';
     }
