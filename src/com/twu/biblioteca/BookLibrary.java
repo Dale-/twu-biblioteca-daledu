@@ -44,7 +44,15 @@ public class BookLibrary {
     }
 
     public ArrayList<Book> getBorrowedBooks() {
-        return this.borrowedBooks;
+
+        ArrayList<Book> borrowedBooks = new ArrayList<Book>();
+
+        for (Book book: this.library) {
+            if(book.getIsCheckout() == false) {
+                borrowedBooks.add(book);
+            }
+        }
+        return borrowedBooks;
     }
 
     public Book setBorrowedBook(int number) {
