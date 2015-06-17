@@ -39,6 +39,13 @@ public class User {
         return this.type;
     }
 
+    public String printUserInfo() {
+        String userInfo = "\tName: " + this.name + "\n\tType: " + this.type + "\n" +
+                          "\tEmail: " + this.email + "\n\tPhoneNumber: " + this.phoneNumber + "\n";
+        System.out.println(userInfo);
+        return userInfo;
+    }
+
     public static User[] UserCollection() {
         return new User[]{
                 new User("Dale", "0326", "customer", "daledu@gmail.com", "18717394542"),
