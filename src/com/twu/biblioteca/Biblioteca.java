@@ -10,25 +10,10 @@ public class Biblioteca {
 
     public static void main(String[] args) {
 
-//        int choiceNumber = -1;
-//        final int quitNumber = 0;
         Biblioteca biblioteca = new Biblioteca();
         System.out.println(biblioteca.welcome());
-        while(choiceNumber != quitNumber) {
-            System.out.println(biblioteca.menu());
-            choiceNumber = Integer.parseInt(InputReader.getInput());
-            switch(choiceNumber) {
-                case 1:
-                    biblioteca.listBookLibrary();
-                    break;
-                case 2:
-                    biblioteca.checkoutBook(biblioteca.getBookLibrary());
-                    break;
-                case 3:
-                    biblioteca.returnBook(biblioteca.getBookLibrary());
-                    break;
-            }
-        }
+        biblioteca.showMainMenu(biblioteca);
+
     }
 
     public Biblioteca() {
@@ -114,9 +99,9 @@ public class Biblioteca {
                 case 2:
                     biblioteca.showMovieLibrary(biblioteca);
                     break;
-                case 3:
-                    biblioteca.showUserInfo(biblioteca.getUser());
-                    break;
+//                case 3:
+//                    biblioteca.showUserInfo(biblioteca.getUser());
+//                    break;
             }
         }
     }
@@ -140,22 +125,22 @@ public class Biblioteca {
         }
     }
 
-//    public void showBookLibrary(Biblioteca biblioteca) {
-//        int input = -1;
-//        while(input != quitNumber) {
-//            System.out.println(this.bookMenu());
-//            input = Integer.parseInt(InputReader.getInput());
-//            switch(input) {
-//                case 1:
-//                    biblioteca.listBookLibrary();
-//                    break;
-//                case 2:
-//                    biblioteca.checkoutBook(biblioteca.getBookLibrary());
-//                    break;
-//                case 3:
-//                    biblioteca.returnBook(biblioteca.getBookLibrary());
-//                    break;
-//            }
-//        }
-//    }
+    public void showMovieLibrary(Biblioteca biblioteca) {
+        int input = -1;
+        while(input != quitNumber) {
+            System.out.println(this.movieMenu());
+            input = Integer.parseInt(InputReader.getInput());
+            switch(input) {
+                case 1:
+                    biblioteca.listMovieLibrary();
+                    break;
+                case 2:
+                    biblioteca.checkoutMovie(biblioteca.getMovieLibrary());
+                    break;
+                case 3:
+                    biblioteca.returnMovie(biblioteca.getMovieLibrary());
+                    break;
+            }
+        }
+    }
 }
