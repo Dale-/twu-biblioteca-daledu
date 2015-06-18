@@ -109,8 +109,8 @@ public class Biblioteca {
 
     public void showCustomerMainMenu(Biblioteca biblioteca) {
         int input = -1;
-        System.out.println(this.customerMainMenu());
         while(input != quitNumber) {
+            System.out.println(this.customerMainMenu());
             input = Integer.parseInt(InputReader.getInput());
             switch(input) {
                 case 1:
@@ -123,10 +123,10 @@ public class Biblioteca {
                     biblioteca.getUser().printUserInfo();
                     break;
                 case 0:
-                    System.out.println("-----EXIT BIBLIOTECA-----");
+                    System.out.println("\n-----EXIT BIBLIOTECA-----");
                     break;
                 default:
-                    System.out.println("Plase Enter Correct Number: ");
+                    System.out.println("\nThe Input Is Illegal!\n");
             }
         }
     }
