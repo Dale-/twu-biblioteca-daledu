@@ -13,7 +13,7 @@ public class Biblioteca {
 
         Biblioteca biblioteca = new Biblioteca();
         if(User.login(biblioteca)) {
-            biblioteca.showMainMenu(biblioteca);
+            biblioteca.showCustomerMainMenu(biblioteca);
         }
     }
 
@@ -54,11 +54,19 @@ public class Biblioteca {
         return welcomeInfo;
     }
 
-    public String mainMenu() {
+    public String customerMainMenu() {
         return "-------Main Menu-------\n" +
                 "[1] Enter Book Library\n" +
                 "[2] Enter Movie Library\n" +
                 "[3] Show My Profile\n" +
+                "[0] Quit Biblioteca System\n" +
+                "Please Enter Your Choice :";
+    }
+
+    public String librarianMainMenu() {
+        return "-------Main Menu-------\n" +
+                "[1] Enter Book Library\n" +
+                "[2] Enter Movie Library\n" +
                 "[0] Quit Biblioteca System\n" +
                 "Please Enter Your Choice :";
     }
@@ -99,10 +107,10 @@ public class Biblioteca {
                 "Please Enter Your Choice :";
     }
 
-    public void showMainMenu(Biblioteca biblioteca) {
+    public void showCustomerMainMenu(Biblioteca biblioteca) {
         int input = -1;
         while(input != quitNumber) {
-            System.out.println(this.mainMenu());
+            System.out.println(this.customerMainMenu());
             input = Integer.parseInt(InputReader.getInput());
             switch(input) {
                 case 1:
