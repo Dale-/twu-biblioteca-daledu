@@ -2,11 +2,11 @@ package com.twu.biblioteca;
 
 public class Book {
 
+    private User user;
     private String name;
     private String author;
     private String publishedyear;
     private Boolean isBorrowed;
-    private User user;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;

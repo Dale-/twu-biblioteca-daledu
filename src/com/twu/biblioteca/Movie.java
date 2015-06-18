@@ -2,12 +2,12 @@ package com.twu.biblioteca;
 
 public class Movie {
 
+    private User user;
     private String name;
     private String year;
     private String director;
     private int movieRating;
     private Boolean isBorrowed;
-    private String borrowedName;
 
     public Movie(String name, String year, String director, int movieRating) {
         this.name = name;
@@ -41,12 +41,12 @@ public class Movie {
         this.isBorrowed = isBorrowed;
     }
 
-    public void setBorrowedName(String borrowedName) {
-        this.borrowedName = borrowedName;
+    public User getUser() {
+        return this.user;
     }
 
-    public String getBorrowedName() {
-        return borrowedName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getMovieInfo() {
