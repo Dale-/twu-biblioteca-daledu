@@ -73,6 +73,16 @@ public class MovieLibrary {
         return MovieLibraryInfo;
     }
 
+    public String listMoviesWithBorrower(ArrayList<Movie> movies, User user) {
+
+        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
+        for(int i = 0; i < movies.size(); i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + movies.get(i).getMovieInfoWithBorrower();
+        }
+        System.out.println(BookLibraryInfo);
+
+        return BookLibraryInfo;
+    }
 
     public void checkoutMovie(MovieLibrary movieLibrary, User user) {
 
