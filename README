@@ -1,29 +1,22 @@
-Instructions to push your code to code.google.com
-=================================================
-1. Sign into GitHub and create a new repository
-        Repository name: twu-biblioteca-yourname
-        Privacy level: Public
-        Don't check "Initialize this repository with a README"
-        Add .gitignore: None
-        Add a license: Apache License 2.0
+Login Account
 
-2. Run 'git init' in the folder that was extracted from the downloaded .zip file, in order to
- initialize local repository.
+    UserName: LIB-0000  Password: 0326  Type: customer
+    UserName: LIB-0001  Password: 0326  Type: customer
+    UserName: LIB-1000  Password: 0326  Type: librarian
+    UserName: LIB-1001  Password: 0326  Type: librarian
 
-3. Make a local commit.
-    $ git add -A
-    $ git commit -m “Initial commit”
+Feature
 
-(Dont forget to add the hidden .idea folder, as it will make opening your project in Intellij easier.)
+    role: customer
 
-4. After you are done with the local commit, you can share your code with "The World" by pushing it to your
- GitHub repository.
-    $ git remote add origin https://github.com/<YOUR-GITHUB-USERNAME>/twu-biblioteca-<YOURNAME>
-    $ git push origin master
+        [1] Enter Book Library
+        [2] Enter Movie Library
+        [3] Show Your Profile
+        [4] Quit Biblioteca System
 
-Instructions to open your code in Intellij
-==========================================
-1. Go to File -> Open (or Open Project)
-2. Select the directory containing the code
-DONE !
+    role: librarian
 
+        [1] Enter Book Library
+        [2] Enter Movie Library
+        [3] Show Who Borrow Book & Movie
+        [4] Quit Biblioteca System
