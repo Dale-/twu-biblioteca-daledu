@@ -53,4 +53,9 @@ public class Movie {
         return " BookName: " + this.name + " Year: " + this.year +
                " Director: " + this.director + " MovieRating: "+ this.movieRating +'\n';
     }
+
+    public String getMovieInfoWithBorrower() {
+        return " BookName: " + this.name + " Year: " + this.year + " Director: " + this.director +
+               " MovieRating: "+ this.movieRating + " Loaned To: " + this.user.getName() + '\n';
+    }
 }
