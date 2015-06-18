@@ -83,7 +83,7 @@ public class MovieLibrary {
             Movie checkoutmovie = movieLibrary.getAvailableMovies().get(checkoutNumber - 1);
             movieLibrary.getAvailableMovies().remove(checkoutNumber - 1);
             movieLibrary.setBorrowedMovie(checkoutNumber);
-            checkoutmovie.setBorrowedName(user.getName());
+            checkoutmovie.setUser(user);
             System.out.println("Thank you! Enjoy the movie");
         } catch (Exception e) {
             System.out.println("That movie is not available");
