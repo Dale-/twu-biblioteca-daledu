@@ -101,8 +101,8 @@ public class MovieLibrary {
         }
     }
 
-    public void returnMovie(MovieLibrary movieLibrary) {
-        movieLibrary.listMovies(movieLibrary.getBorrowedMovies());
+    public void returnMovie(MovieLibrary movieLibrary, User user) {
+        movieLibrary.listMoviesWithBorrower(movieLibrary.getBorrowedMovies(), user);
         System.out.println("Please input one number that you want to return :");
         int returnNumber = Integer.parseInt(InputReader.getInput());
         try {
