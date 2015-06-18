@@ -84,7 +84,7 @@ public class Biblioteca {
     }
 
     public void returnMovie(MovieLibrary movieLibrary) {
-        movieLibrary.returnMovie(movieLibrary);
+        movieLibrary.returnMovie(movieLibrary, this.user);
     }
 
     public String bookMenu() {
