@@ -77,6 +77,17 @@ public class BookLibrary {
         return BookLibraryInfo;
     }
 
+    public String listBooksWithBorrower(ArrayList<Book> books, User user) {
+
+        String BookLibraryInfo = "-----------------------------------BOOK LIBRARY-----------------------------------\n";
+        for(int i = 0; i < books.size(); i++) {
+            BookLibraryInfo += "[" + (i + 1) + "]" + books.get(i).getBookInfoWithBorrower();
+        }
+        System.out.println(BookLibraryInfo);
+
+        return BookLibraryInfo;
+    }
+
     public void checkoutBook(BookLibrary bookLibrary, User user) {
 
         bookLibrary.listBooks(bookLibrary.getAvailableBooks());
@@ -87,7 +98,7 @@ public class BookLibrary {
             Book checkoutBook = bookLibrary.getAvailableBooks().get(checkoutNumber - 1);
             bookLibrary.getAvailableBooks().remove(checkoutNumber - 1);
             bookLibrary.setBorrowedBook(checkoutNumber);
-            checkoutBook.setBorrowedName(user.getName());
+            checkoutBook.setUser(user);
             System.out.println("Thank you! Enjoy the book");
         } catch (Exception e) {
             System.out.println("That book is not available");
@@ -95,8 +106,8 @@ public class BookLibrary {
         }
     }
 
-    public void returnBook(BookLibrary bookLibrary) {
-        bookLibrary.listBooks(bookLibrary.getBorrowedBooks());
+    public void returnBook(BookLibrary bookLibrary, User user) {
+        bookLibrary.listBooksWithBorrower(bookLibrary.getBorrowedBooks(), user);
         System.out.println("Please input one number that you want to return :");
         int returnNumber = Integer.parseInt(InputReader.getInput());
 

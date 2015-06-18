@@ -6,7 +6,7 @@ public class Book {
     private String author;
     private String publishedyear;
     private Boolean isBorrowed;
-    private String borrowedName;
+    private User user;
 
     public Book(String name, String author, String publishedyear) {
         this.name = name;
@@ -36,15 +36,20 @@ public class Book {
         this.isBorrowed = isBorrowed;
     }
 
-    public void setBorrowedName(String borrowedName) {
-        this.borrowedName = borrowedName;
+    public User getUser() {
+        return this.user;
     }
 
-    public String getBorrowedName() {
-        return borrowedName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getBookInfo() {
         return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear + '\n';
+    }
+
+    public String getBookInfoWithBorrower() {
+        return " BookName: " + this.name + " Author: " + this.author + " PublishedYear: " + this.publishedyear +
+               " Loaned To: " + this.user.getName() + '\n';
     }
 }
