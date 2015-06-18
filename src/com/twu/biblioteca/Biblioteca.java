@@ -128,6 +128,24 @@ public class Biblioteca {
         }
     }
 
+    public void showLibrarianMainMenu(Biblioteca biblioteca) {
+        int input = -1;
+        while(input != quitNumber) {
+            System.out.println(this.customerMainMenu());
+            input = Integer.parseInt(InputReader.getInput());
+            switch(input) {
+                case 1:
+                    biblioteca.showBookLibrary(biblioteca);
+                    break;
+                case 2:
+                    biblioteca.showMovieLibrary(biblioteca);
+                    break;
+                default:
+                    System.out.println("-----EXIT BIBLIOTECA-----");
+            }
+        }
+    }
+
     public void showBookLibrary(Biblioteca biblioteca) {
         int input = -1;
         while(input != quitNumber) {

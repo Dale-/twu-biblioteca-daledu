@@ -26,8 +26,8 @@
       <file leaf-file-name="Biblioteca.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Biblioteca.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3939394">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.121212125">
+              <caret line="124" column="23" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="23" />
               <folding>
                 <element signature="e#588#589#0" expanded="true" />
                 <element signature="e#620#621#0" expanded="true" />
@@ -263,8 +263,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="137" />
-    <option name="y" value="48" />
+    <option name="x" value="-15" />
+    <option name="y" value="37" />
     <option name="width" value="1074" />
     <option name="height" value="824" />
   </component>
@@ -882,15 +882,15 @@
       <workItem from="1434270132832" duration="7083000" />
       <workItem from="1434333789539" duration="543000" />
       <workItem from="1434446331952" duration="13000" />
-      <workItem from="1434505202567" duration="26469000" />
+      <workItem from="1434505202567" duration="26676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97565000" />
+    <option name="totallyTimeSpent" value="97772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="137" y="48" width="1074" height="824" extended-state="6" />
+    <frame x="-15" y="37" width="1074" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -967,8 +967,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1044,8 +1044,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1093,8 +1093,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1135,8 +1135,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1177,8 +1177,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,8 +1205,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#724#725#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1429,8 +1429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Biblioteca.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3939394">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.121212125">
+          <caret line="124" column="23" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="23" />
           <folding>
             <element signature="e#588#589#0" expanded="true" />
             <element signature="e#620#621#0" expanded="true" />
